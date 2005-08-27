@@ -1,4 +1,4 @@
-# $Rev: 3327 $, $Date: 2005-08-15 12:17:57 $
+# $Rev: 3327 $, $Date: 2005-08-27 17:42:48 $
 #
 Summary:	xkbfile library
 Summary(pl):	Biblioteka xkbfile
@@ -14,7 +14,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	libtool
-BuildRequires:	pkg-config
+BuildRequires:	pkgconfig >= 0.19
 BuildRequires:	xorg-util-util-macros
 BuildRoot:	%{tmpdir}/libxkbfile-%{version}-root-%(id -u -n)
 
