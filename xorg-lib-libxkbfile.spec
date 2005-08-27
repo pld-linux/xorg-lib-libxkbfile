@@ -1,5 +1,3 @@
-# $Rev: 3327 $, $Date: 2005-08-27 17:42:48 $
-#
 Summary:	xkbfile library
 Summary(pl):	Biblioteka xkbfile
 Name:		xorg-lib-libxkbfile
@@ -12,11 +10,11 @@ Source0:	http://xorg.freedesktop.org/X11R7.0-RC0/lib/libxkbfile-%{version}.tar.b
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 0.19
+BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-util-util-macros
-BuildRoot:	%{tmpdir}/libxkbfile-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 
@@ -26,12 +24,11 @@ xkbfile library.
 %description -l pl
 Biblioteka xkbfile.
 
-
 %package devel
 Summary:	Header files libxkbfile development
 Summary(pl):	Pliki nag³ówkowe do biblioteki libxkbfile
 Group:		X11/Development/Libraries
-Requires:	xorg-lib-libxkbfile = %{version}-%{release}
+Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libX11-devel
 
 %description devel
@@ -46,12 +43,11 @@ Biblioteka xkbfile.
 Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
 u¿ywaj±cych biblioteki libxkbfile.
 
-
 %package static
-Summary:	Static libxkbfile libraries
-Summary(pl):	Biblioteki statyczne libxkbfile
-Group:		Development/Libraries
-Requires:	xorg-lib-libxkbfile-devel = %{version}-%{release}
+Summary:	Static libxkbfile library
+Summary(pl):	Biblioteka statyczna libxkbfile
+Group:		X11/Development/Libraries
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 xkbfile library.
@@ -61,12 +57,10 @@ This package contains the static libxkbfile library.
 %description static -l pl
 Biblioteka xkbfile.
 
-Pakiet zawiera statyczne biblioteki libxkbfile.
-
+Pakiet zawiera statyczn± bibliotekê libxkbfile.
 
 %prep
 %setup -q -n libxkbfile-%{version}
-
 
 %build
 %{__libtoolize}
@@ -78,7 +72,6 @@ Pakiet zawiera statyczne biblioteki libxkbfile.
 
 %{__make}
 
-
 %install
 rm -rf $RPM_BUILD_ROOT
 
@@ -86,28 +79,23 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	pkgconfigdir=%{_pkgconfigdir}
 
-
 %clean
 rm -rf $RPM_BUILD_ROOT
-
 
 %post	-p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
-
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog
-%attr(755,root,wheel) %{_libdir}/libxkbfile.so.*
-
+%attr(755,root,root) %{_libdir}/libxkbfile.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%{_includedir}/X11/extensions/*.h
+%attr(755,root,root) %{_libdir}/libxkbfile.so
 %{_libdir}/libxkbfile.la
-%attr(755,root,wheel) %{_libdir}/libxkbfile.so
+%{_includedir}/X11/extensions/*.h
 %{_pkgconfigdir}/xkbfile.pc
-
 
 %files static
 %defattr(644,root,root,755)
