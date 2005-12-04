@@ -23,8 +23,8 @@ xkbfile library.
 Biblioteka xkbfile.
 
 %package devel
-Summary:	Header files libxkbfile development
-Summary(pl):	Pliki nag³ówkowe do biblioteki libxkbfile
+Summary:	Header files for libxkbfile library
+Summary(pl):	Pliki nag³ówkowe biblioteki libxkbfile
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libX11-devel
@@ -33,7 +33,7 @@ Requires:	xorg-lib-libX11-devel
 xkbfile library.
 
 This package contains the header files needed to develop programs that
-use these libxkbfile.
+use libxkbfile.
 
 %description devel -l pl
 Biblioteka xkbfile.
