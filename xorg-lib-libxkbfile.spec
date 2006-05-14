@@ -14,6 +14,7 @@ BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-util-util-macros
+Obsoletes:	xkbfile
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -28,6 +29,7 @@ Summary(pl):	Pliki nag³ówkowe biblioteki libxkbfile
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libX11-devel
+Obsoletes:	xkbfile-devel
 
 %description devel
 xkbfile library.
