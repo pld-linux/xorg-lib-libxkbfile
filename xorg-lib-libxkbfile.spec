@@ -1,5 +1,5 @@
 Summary:	xkbfile library
-Summary(pl):	Biblioteka xkbfile
+Summary(pl.UTF-8):   Biblioteka xkbfile
 Name:		xorg-lib-libxkbfile
 Version:	1.0.4
 Release:	3
@@ -20,12 +20,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 xkbfile library.
 
-%description -l pl
+%description -l pl.UTF-8
 Biblioteka xkbfile.
 
 %package devel
 Summary:	Header files for libxkbfile library
-Summary(pl):	Pliki nag³ówkowe biblioteki libxkbfile
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki libxkbfile
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libX11-devel
@@ -37,15 +37,15 @@ xkbfile library.
 This package contains the header files needed to develop programs that
 use libxkbfile.
 
-%description devel -l pl
+%description devel -l pl.UTF-8
 Biblioteka xkbfile.
 
-Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
-u¿ywaj±cych biblioteki libxkbfile.
+Pakiet zawiera pliki nagÅ‚Ã³wkowe niezbÄ™dne do kompilowania programÃ³w
+uÅ¼ywajÄ…cych biblioteki libxkbfile.
 
 %package static
 Summary:	Static libxkbfile library
-Summary(pl):	Biblioteka statyczna libxkbfile
+Summary(pl.UTF-8):   Biblioteka statyczna libxkbfile
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
@@ -54,10 +54,10 @@ xkbfile library.
 
 This package contains the static libxkbfile library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteka xkbfile.
 
-Pakiet zawiera statyczn± bibliotekê libxkbfile.
+Pakiet zawiera statycznÄ… bibliotekÄ™ libxkbfile.
 
 %prep
 %setup -q -n libxkbfile-%{version}
