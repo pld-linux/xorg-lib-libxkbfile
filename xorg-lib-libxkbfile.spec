@@ -1,5 +1,5 @@
 Summary:	xkbfile library
-Summary(pl.UTF-8):   Biblioteka xkbfile
+Summary(pl.UTF-8):	Biblioteka xkbfile
 Name:		xorg-lib-libxkbfile
 Version:	1.0.4
 Release:	3
@@ -25,7 +25,7 @@ Biblioteka xkbfile.
 
 %package devel
 Summary:	Header files for libxkbfile library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libxkbfile
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libxkbfile
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libX11-devel
@@ -45,7 +45,7 @@ używających biblioteki libxkbfile.
 
 %package static
 Summary:	Static libxkbfile library
-Summary(pl.UTF-8):   Biblioteka statyczna libxkbfile
+Summary(pl.UTF-8):	Biblioteka statyczna libxkbfile
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
