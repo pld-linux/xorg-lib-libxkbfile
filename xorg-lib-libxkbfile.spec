@@ -13,6 +13,7 @@ BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libX11-devel
+BuildRequires:	xorg-proto-kbproto-devel
 BuildRequires:	xorg-util-util-macros
 Obsoletes:	xkbfile
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -89,12 +90,14 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc COPYING ChangeLog
 %attr(755,root,root) %{_libdir}/libxkbfile.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libxkbfile.so.1
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libxkbfile.so
 %{_libdir}/libxkbfile.la
-%{_includedir}/X11/extensions/*.h
+%{_includedir}/X11/extensions/XKB*.h
+%{_includedir}/X11/extensions/XKM*.h
 %{_pkgconfigdir}/xkbfile.pc
 
 %files static
