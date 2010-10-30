@@ -1,14 +1,14 @@
 Summary:	xkbfile library
 Summary(pl.UTF-8):	Biblioteka xkbfile
 Name:		xorg-lib-libxkbfile
-Version:	1.0.6
-Release:	2
+Version:	1.0.7
+Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libxkbfile-%{version}.tar.bz2
-# Source0-md5:	b01156e263eca8177e6b7f10441951c4
+# Source0-md5:	59b4fe0bdf8d9b05e45b59e8fe9e7516
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf >= 2.57
+BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
@@ -77,8 +77,7 @@ Pakiet zawiera statyczną bibliotekę libxkbfile.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT \
-	pkgconfigdir=%{_pkgconfigdir}
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
