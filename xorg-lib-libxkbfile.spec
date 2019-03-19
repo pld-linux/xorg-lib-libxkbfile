@@ -1,13 +1,13 @@
-Summary:	xkbfile library
-Summary(pl.UTF-8):	Biblioteka xkbfile
+Summary:	xkbfile library - XKB file handling routines
+Summary(pl.UTF-8):	Biblioteka xkbfile - funkcje do obsługi plików XKB
 Name:		xorg-lib-libxkbfile
-Version:	1.0.9
+Version:	1.1.0
 Release:	1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/individual/lib/libxkbfile-%{version}.tar.bz2
-# Source0-md5:	4a4cfeaf24dab1b991903455d6d7d404
-URL:		http://xorg.freedesktop.org/
+Source0:	https://xorg.freedesktop.org/releases/individual/lib/libxkbfile-%{version}.tar.bz2
+# Source0-md5:	dd7e1e946def674e78c0efbc5c7d5b3b
+URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
@@ -19,10 +19,12 @@ Obsoletes:	xkbfile
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-xkbfile library.
+libxkbfile library is used by the X servers and utilities to parse the
+XKB configuration data files.
 
 %description -l pl.UTF-8
-Biblioteka xkbfile.
+Biblioteka libxkbfile jest wykorzystywana przez serwery i narzędzia X
+do analizy plików danych konfiguracyjnych XKB.
 
 %package devel
 Summary:	Header files for libxkbfile library
@@ -33,14 +35,10 @@ Requires:	xorg-lib-libX11-devel
 Obsoletes:	xkbfile-devel
 
 %description devel
-xkbfile library.
-
 This package contains the header files needed to develop programs that
 use libxkbfile.
 
 %description devel -l pl.UTF-8
-Biblioteka xkbfile.
-
 Pakiet zawiera pliki nagłówkowe niezbędne do kompilowania programów
 używających biblioteki libxkbfile.
 
@@ -51,13 +49,9 @@ Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
-xkbfile library.
-
 This package contains the static libxkbfile library.
 
 %description static -l pl.UTF-8
-Biblioteka xkbfile.
-
 Pakiet zawiera statyczną bibliotekę libxkbfile.
 
 %prep
@@ -89,7 +83,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog README
+%doc COPYING ChangeLog README.md
 %attr(755,root,root) %{_libdir}/libxkbfile.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libxkbfile.so.1
 
