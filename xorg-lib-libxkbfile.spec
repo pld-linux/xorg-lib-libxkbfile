@@ -1,21 +1,23 @@
 Summary:	xkbfile library - XKB file handling routines
 Summary(pl.UTF-8):	Biblioteka xkbfile - funkcje do obsługi plików XKB
 Name:		xorg-lib-libxkbfile
-Version:	1.1.0
+Version:	1.1.1
 Release:	1
 License:	MIT
 Group:		X11/Libraries
-Source0:	https://xorg.freedesktop.org/releases/individual/lib/libxkbfile-%{version}.tar.bz2
-# Source0-md5:	dd7e1e946def674e78c0efbc5c7d5b3b
+Source0:	https://xorg.freedesktop.org/releases/individual/lib/libxkbfile-%{version}.tar.xz
+# Source0-md5:	93491cc26e6a47ef12061c9229bffc13
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-proto-kbproto-devel
 BuildRequires:	xorg-util-util-macros >= 1.8
-Obsoletes:	xkbfile
+BuildRequires:	xz
+Obsoletes:	xkbfile < 1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -32,7 +34,8 @@ Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libxkbfile
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libX11-devel
-Obsoletes:	xkbfile-devel
+Requires:	xorg-proto-kbproto-devel
+Obsoletes:	xkbfile-devel < 1
 
 %description devel
 This package contains the header files needed to develop programs that
