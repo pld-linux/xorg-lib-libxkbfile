@@ -1,12 +1,12 @@
 Summary:	xkbfile library - XKB file handling routines
 Summary(pl.UTF-8):	Biblioteka xkbfile - funkcje do obsługi plików XKB
 Name:		xorg-lib-libxkbfile
-Version:	1.1.1
+Version:	1.1.2
 Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	https://xorg.freedesktop.org/releases/individual/lib/libxkbfile-%{version}.tar.xz
-# Source0-md5:	93491cc26e6a47ef12061c9229bffc13
+# Source0-md5:	8af2275955d40166bb647b14e4896ab1
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
